@@ -8,4 +8,5 @@ public class ContactUs extends SystemBar {
     public ContactUs() {
         PageFactory.initElements(driver, this);
     }
+
 }
