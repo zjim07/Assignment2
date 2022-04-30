@@ -1,9 +1,6 @@
 package app.shared;
 
-import app.pom.ContactUs;
-import app.pom.Homepage;
-import app.pom.Login;
-import app.pom.SummerDresses;
+import app.pom.*;
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,11 +26,21 @@ public class SystemBar extends BasePage {
     @FindBy(xpath = "//ul[@style='display: block;']//a[@title='Summer Dresses']")
     public WebElement womenHoverMenuDressesSummerDressesButton;
 
+
+    @FindBy(id = "block_top_menu]/ul/li[2]/a")
+    public WebElement allDressesButton;
+
+    @FindBy(xpath = "//*[@id=block_top_menu]/ul/li[2]/ul/li[1]/a")
+    public WebElement dressesHoverMenuCasualDressesButton;
+
     @FindBy(xpath = "//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/a[@title='Dresses']")
     public WebElement dressesButton;
 
     @FindBy(xpath = "//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/a[@title='T-shirts']")
     public WebElement tShirtsButton;
+
+
+
 
     public SystemBar() {
         PageFactory.initElements(driver, this);
@@ -66,6 +73,15 @@ public class SystemBar extends BasePage {
 
         return new SummerDresses();
     }
+    public void hoverOveAllDressesButton() {
+        hoverOverElement(allDressesButton);
+    }
+
+    public CasualDresses clickDressesHoverMenuCasualDressesButton() {
+        safeClickOnElement(dressesHoverMenuCasualDressesButton);
+
+        return new CasualDresses();
+    }
 
     public boolean isSignedIn() {
         boolean isSignedIn = false;
@@ -77,4 +93,6 @@ public class SystemBar extends BasePage {
         return isSignedIn;
     }
 
+    public void hoverOverAllDressesButton() {
+    }
 }
