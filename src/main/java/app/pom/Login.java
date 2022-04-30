@@ -78,6 +78,9 @@ public class Login extends SystemBar {
         clickOnElement(signInButton);
     }
 
+    @FindBy(xpath = "//a[@class='account']/span")
+    public WebElement getUsername;
+
     // endregion
 
 }
