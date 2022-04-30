@@ -124,6 +124,18 @@ public class ShoppingCart extends TestBasePage {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    @Test
+    public void testBlueFilterButton(){
+        Homepage homepage = new Homepage();
+        homepage.dressesSection.click();
+        homepage.blueFilter.click();
+        webDriverWait.until(ExpectedConditions.textToBePresentInElement(homepage.filterConfirmation, "DRESSES > COLOR BLUE"));
+        String actualResult = homepage.filterConfirmation.getText();
+        System.out.println(actualResult);
+        String expectedResult = "DRESSES > COLOR BLUE";
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
 
 
 

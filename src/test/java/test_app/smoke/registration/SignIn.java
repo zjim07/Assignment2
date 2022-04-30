@@ -36,14 +36,7 @@ public class SignIn extends TestBasePage {
         Assert.assertEquals(actualResults, expectedResults);
         //Uncomment next line if you actually want to save the change
         //homepage.saveButton.click();
+
     }
 
-    @Test
-    public void testSignOut(){
-        Homepage homepage = new Homepage();
-        Login login = homepage.clickLoginButton();
-        login.login(appConfig.get(Config.AppProperties.USER), appConfig.get(Config.AppProperties.PASSWORD));
-        homepage.signOutButton.click();
-        Assert.assertFalse(homepage.confirmSignOut.isDisplayed());
-    }
 }

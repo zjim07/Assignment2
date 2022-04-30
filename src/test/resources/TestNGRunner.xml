@@ -20,6 +20,7 @@
     <test name="Smoke">
         <classes>
             <class name="test_app.smoke.registration.Registration"/>
+            <class name="test_app.smoke.registration.SignIn"/>
         </classes>
     </test>
 

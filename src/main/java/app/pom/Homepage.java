@@ -76,4 +76,7 @@ public class Homepage extends SystemBar {
 
     @FindBy(xpath = "//a[@class='account']")
     public WebElement confirmSignOut;
+
+    @FindBy(id = "layered_id_attribute_group_14")
+    public WebElement blueFilter;
 }
