@@ -28,7 +28,7 @@ public class CreateAccount extends SystemBar {
     @FindBy(id = "newsletter")
     public WebElement newsletterCheckBox;
 
-    @FindBy(id = "optin")
+    @FindBy(id = "option")
     public WebElement specialOffersCheckBox;
 
     @FindBy(id = "address1")

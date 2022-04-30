@@ -4,28 +4,33 @@
 
     <parameter name="browser" value="chrome"/>
 
-    <test name="BAT - Integration">
-        <parameter name="enabled" value="false"/>
+    <test name="Smoke-Newsletter">
         <classes>
-            <class name="test_app.build_acceptance.integration.Connectivity"/>
+            <class name="test_app.smoke.registration.Newsletter"/>
         </classes>
     </test>
 
-    <test name="BAT - System">
+    <test name="Smoke-PasswordRecovery">
         <classes>
-            <class name="test_app.build_acceptance.system.Authentication"/>
+            <class name="test_app.smoke.registration.PasswordRecovery"/>
         </classes>
     </test>
 
-    <test name="Smoke">
+    <test name="BAT - Logo">
         <classes>
-            <class name="test_app.smoke.registration.Registration"/>
+            <class name="test_app.build_acceptance.integration.Logo"/>
         </classes>
     </test>
 
-    <test name="Smoke-ShoppingCart">
+    <test name="Smoke-SearchBar">
         <classes>
-            <class name="test_app.smoke.transactions.ShoppingCart"/>
+            <class name="test_app.smoke.transactions.SearchBar"/>
+        </classes>
+    </test>
+
+    <test name="Smoke-WomenDresses">
+        <classes>
+            <class name="test_app.smoke.transactions.WomenDresses"/>
         </classes>
     </test>
 

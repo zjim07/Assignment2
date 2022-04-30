@@ -36,6 +36,21 @@ public class Login extends SystemBar {
     @FindBy(xpath = "//div[@id='center_column']//div[@class='alert alert-danger']//li")
     public WebElement errorMessageText;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public Login() {
         PageFactory.initElements(driver, this);
     }

@@ -152,7 +152,7 @@ public class BasePage {
         select.selectByValue(value);
     }
 
-    public boolean isElementVisible(WebElement element) {
+    public static boolean isElementVisible(WebElement element) {
         try {
             syncWait.until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
